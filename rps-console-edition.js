@@ -3,7 +3,7 @@ function getCpuChoice() {
     choice = choice <= 33 ? "rock" :
     choice <= 66 ? "paper" :
     "scissors";
-    console.log("CPU chose "+choice+"."); // returns the choice in a neat way...
+    alert("CPU chose "+choice+"."); // returns the choice in a neat way...
     return choice.slice(0,1).toLowerCase(); // then converts "choice" into something workable.
 }
 
@@ -50,11 +50,11 @@ function playRound(player, cpu) {
 
 function playGame() {
     for (let i=0; i < 5; i++) {
-        console.log( playRound( getPlayerChoice(), getCpuChoice() ) );
+        alert( playRound( getPlayerChoice(), getCpuChoice() ) );
     }
 
 }
 
 playGame();
 let winner = (playerScore > cpuScore) ? "Player wins overall!" : (cpuScore > playerScore) ? "CPU wins overall." : "It was a draw."; // compares scores to decide the winner and assigns it to "winner"
-console.log("The game is over! Final scores are:\nPlayer - "+playerScore+"\nCPU - "+cpuScore+"\n"+winner);
+alert("The game is over! Final scores are:\nPlayer - "+playerScore+"\nCPU - "+cpuScore+"\n"+winner);
